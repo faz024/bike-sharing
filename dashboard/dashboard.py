@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-from babel.numbers import format_currency
 
 sns.set(style="dark")
 
@@ -30,7 +29,7 @@ def create_weekday_df(hour_df):
 
 # load dataset
 
-all_df = pd.read_csv("hour_data_clean.csv")
+all_df = pd.read_csv("https://raw.githubusercontent.com/faz024/bike-sharing/refs/heads/main/dashboard/hour_data_clean.csv")
 
 datetime_columns = ["dteday"]
 all_df.sort_values(by="dteday", inplace=True)
